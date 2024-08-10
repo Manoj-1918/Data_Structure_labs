@@ -1,0 +1,19 @@
+    if(m>=n){
+        for(int i=0;i<m;i++){
+            sumpol[i]=pol1[i];
+        }
+        for(int i=0;i<a;i++){
+            sumpol[i] += pol2[i];
+
+        }
+    }
+    else{
+           for(int i=0;i<n;i++){
+            sumpol[i]=pol2[i];
+        }
+        for(int i=0;i<a;i++){
+            sumpol[i] += pol1[i];
+
+        }
+
+    }
