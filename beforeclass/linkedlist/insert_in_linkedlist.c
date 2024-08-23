@@ -33,6 +33,8 @@ void Display(){
     }
 }
 
+//insertion at start
+
 void insertAtStart(char data[30],int age){
     new_node=(struct Node*)malloc(sizeof(struct Node));
     strcpy(new_node->data,data);
@@ -41,6 +43,8 @@ void insertAtStart(char data[30],int age){
     head=new_node;
 }
 
+
+//insertion at last
 
 void inserAtend(char data[30],int age){
     new_node=(struct Node*)malloc(sizeof(struct Node));
@@ -62,6 +66,9 @@ void inserAtend(char data[30],int age){
 
 }
 
+
+//insertion at any position
+
 void insertAt(int pos,char data[30],int age){
     new_node=(struct Node*)malloc(sizeof(struct Node));
    strcpy(new_node->data,data);
@@ -80,6 +87,42 @@ void insertAt(int pos,char data[30],int age){
         temp->next=new_node;
         temp=new_node;
         temp->next=k;
+    }
+}
+
+void deleteAtStart(){
+    temp=head;
+    if(head==NULL)  printf("No nodes are created yet");
+    else{
+    head=temp->next;
+    free(temp);
+    }
+}
+
+void deleteAtEnd(){
+    temp=head;
+    if(head==NULL)     printf("NO nodes are created yet");
+    else{
+        while(temp->next!=NULL){
+            temp=temp->next;
+        }
+        free(temp->next);
+        temp->next=NULL;
+    }
+}
+
+void deleteAt(int pos){
+    temp=head;
+    struct Node *prev=NULL;
+    if(head==NULL)  printf("NO nodes are created yet");
+    else{
+        while(pos>1){
+            prev=temp;
+            temp=temp->next;
+            pos--;
+        }
+        prev->next = temp->next;
+        free(temp);
     }
 }
 
@@ -151,6 +194,11 @@ while(c){
     printf("press 1 to continue with list operations and 0 to end program");
     scanf("%d",&c);
 }
+deleteAt(4);
+deleteAtEnd();
+deleteAtStart();
+
+Display();
 
     return 0;
 }
