@@ -6,8 +6,9 @@ int main(){
 
     printf("enter the two numbers to compare");
     scanf("%d%d",&a,&b);
+        printf("output with call by value\n ");
     Compare(a,b); // call by value;
-    
+    printf("output with call by reference \n");
     Refcompare(&a,&b);// call by reference
     return 0;
 

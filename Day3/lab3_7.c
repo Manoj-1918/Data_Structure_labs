@@ -36,10 +36,10 @@ int main(){
 
 
 
-    // working for sum of polynomials
+    // // working for sum of polynomials
     
-    for(int i=0;i<m;i++)        sumpol[i]=pol1[i];
-    for(int i=0;i<a;i++)        sumpol[i]+=pol2[i];
+    // for(int i=0;i<m;i++)        sumpol[i]=pol1[i];
+    // for(int i=0;i<a;i++)        sumpol[i]+=pol2[i];
 
    
     //working for multiplication of polynomials
@@ -55,7 +55,7 @@ int main(){
 
      printf("\n\nproduct  of polynomials:\n");
     for (int i = 0; i < b; i++) {
-        if (i == a - 1)
+        if (i == b - 1)
             printf("+%dx^%d", product[i], i);
         else
             printf("%dx^%d+ ", product[i], i);

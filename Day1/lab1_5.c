@@ -15,27 +15,27 @@ int main(){
     struct employee Eid[n];
     // taking data from  user.
     for(int i=0;i<n;i++){
-        printf("enter the above detail for employee %d in order compulsary\n",i+1);
+        printf("enter the above detail(id,name,degination,basic salary,HR%,DA%) for employee %d in order compulsary\n",i+1);
         scanf("%d%s%s%f%f%f", &Eid[i].employe_id,&Eid[i].Name,&Eid[i].Degination,&Eid[i].basicSalary,&Eid[i].hra_percent,&Eid[i].da_percent);
         Eid[i].gross_salary=Eid[i].basicSalary+(Eid[i].basicSalary*Eid[i].hra_percent/100)+(Eid[i].basicSalary*Eid[i].da_percent/100);
         
     }
 
     //showing data in console
-    printf("Eid \t Nam \t Deg \t BaS \t\t HR% \t DA% \t Gross Salary\n");
-     for(int i=0;i<n;i++){
+    // printf("Eid \t Nam \t Deg \t BaS \t\t HR% \t DA% \t Gross Salary\n");
+    //  for(int i=0;i<n;i++){
         
-        printf("%d\t%s\t%s\t%.2f\t%.2f\t%.2f\t%.2f\n", Eid[i].employe_id,Eid[i].Name,Eid[i].Degination,Eid[i].basicSalary,Eid[i].hra_percent,Eid[i].da_percent,Eid[i].gross_salary);
+    //     printf("%d\t%s\t%s\t%.2f\t%.2f\t%.2f\t%.2f\n", Eid[i].employe_id,Eid[i].Name,Eid[i].Degination,Eid[i].basicSalary,Eid[i].hra_percent,Eid[i].da_percent,Eid[i].gross_salary);
         
-    }
+    // }
     // another format of print
-// for(int i=0;i<n;i++){
-//             printf(" Employee Id:\t  %d \n", Eid[i].employe_id);
-//         printf("Name :\t %s\n",Eid[i].Name);
-//         printf("Degination:\t %s\n",Eid[i].Degination);
-//         printf("Basic Salary:\t %.2f\n",Eid[i].basicSalary);
-//         printf("Gross Salary:\t%.2f\n",Eid[i].gross_salary);
-// }
+for(int i=0;i<n;i++){
+            printf(" Employee Id:\t  %d \n", Eid[i].employe_id);
+        printf("Name :\t %s\n",Eid[i].Name);
+        printf("Degination:\t %s\n",Eid[i].Degination);
+        printf("Basic Salary:\t %.2f\n",Eid[i].basicSalary);
+        printf("Gross Salary:\t%.2f\n",Eid[i].gross_salary);
+}
     
 
 }

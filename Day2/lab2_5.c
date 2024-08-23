@@ -13,5 +13,12 @@ int main(){
     printf("Enter the number \t");
     scanf("%d",&num);
     result=reverse(num,0);
-    printf("\n Original number :  %d\t Reverse number :  %d ",num,result);
+    if(result>=0)
+    printf("\n Original number :  %d\n Reverse number :  %d ",num,result);
+    else
+    {
+        result=result*(-1);
+        printf("\n Original number :  %d\n Reverse number :  %d- ",num,result);
+
+    }
 }

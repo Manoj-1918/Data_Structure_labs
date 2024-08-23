@@ -23,7 +23,8 @@ int main(){
     for(int i=0;i<n;i++){
    
     printf("Name : %s\n",e2[i].name);
-    printf("Student Id: %d\n",e2[i].age);
+    printf("Age: %d\n",e2[i].age);
+    printf("Marks: %d\n",e2[i].marks);
 
     }
     return 0;

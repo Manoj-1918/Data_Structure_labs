@@ -38,8 +38,8 @@ int main(){
     max1=maximum(arr,n);
     min1=minimum(arr,n);
 
-    printf("Maximum value = \t%d",max1);
-    printf("Minimum value = \t%d",min1);
+    printf("\nMaximum value = \t%d",max1);
+    printf("\nMinimum value = \t%d",min1);
 
     return 0;
 }

@@ -32,7 +32,7 @@ int main(){
 // asking for operations
 
     int operation;
-    printf(" \t\t The program is for (1)addition and (2) multipication ..\n");
+    printf(" \t\t The program is for\n (1)addition \n (2) multipication ..\n");
     printf("Enter 1/2 for the operation : ");
     scanf("%d",&operation);
 
@@ -48,14 +48,14 @@ if(operation==1){
 //calling by value passing complete structure.
 
     c3=add(c1,c2);
-    printf("sum of both the given complex numbers:\t");
+    printf("sum of both the given complex numbers:\n");
     printf("%.1f + %.1f i ",c3.real,c3.imaginary);
 }
 else if(operation==2){
 
     // call by reference
     c3=multiply(&c1,&c2);
-    printf("\nproduct of the given complex number:\t");
+    printf("\nproduct of the given complex number:\n");
     printf("%.1f + %.1f i",c3.real,c3.imaginary);
 
 
@@ -65,9 +65,9 @@ else
 printf("This option is not available");
 
 
-    c3=product(c1,c2);
-    printf("\nproduct of the given complex number:\t");
-    printf("%.1f + %.1f i",c3.real,c3.imaginary);
+    // c3=product(c1,c2);
+    // printf("\nproduct of the given complex number:\t");
+    // printf("%.1f + %.1f i",c3.real,c3.imaginary);
 
     
     return 0;

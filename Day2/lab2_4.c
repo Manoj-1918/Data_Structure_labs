@@ -9,6 +9,7 @@ int reverse(int num,int rev){
 
     }
 int palidrome(int num){
+    if(num<0)   return 0;
     int reversed=reverse(num,0);
     if(reversed == num)
     return 1;

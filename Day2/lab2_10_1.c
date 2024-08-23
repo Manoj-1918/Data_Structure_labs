@@ -17,13 +17,13 @@ int main(){
     //struct Employee.date dob;
     printf("Enter the id,name\t");
     scanf("%d%s",&E1.id,&E1.Name);
-    printf("enter the date of birth day,month,year format\t");
+    printf("enter the date of joining day,month,year format\t");
     scanf("%d%d%d",&E1.doj.day,&E1.doj.month,&E1.doj.year);
 
     //printing values 
     printf("Name :\t%s\n",E1.Name);
     printf("Employee Id :\t%d\n",E1.id);
-    printf("Date of Birth :\t %d/%d/%d\n",E1.doj.day,E1.doj.month,E1.doj.year);
+    printf("Date of joining :\t %d/%d/%d\n",E1.doj.day,E1.doj.month,E1.doj.year);
     return 0;
 
 }

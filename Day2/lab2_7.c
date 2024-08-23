@@ -8,7 +8,7 @@
  struct students get_data(struct students s1){
    struct students s; 
     printf("enter the name and id \n");
-    scanf("%s%d",&s.name,&s.id);
+    scanf("%s %d",&s.name,&s.id);
     return (s);
  }
 

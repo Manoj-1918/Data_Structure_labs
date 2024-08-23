@@ -28,4 +28,6 @@ void primeCheck(int n){
     }
     if(count>0)
     printf("the number %d is not a prime number ",n);
+    else
+    printf("the number %d is a prime number",n);
 }

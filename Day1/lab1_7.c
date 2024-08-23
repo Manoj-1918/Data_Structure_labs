@@ -24,13 +24,13 @@ int main()
 
     for(int i=0;i<2;i++)
     {
-        printf("we are inside the loop");
+    
         printf("\nName      :\t%s", s[i].name);
         printf("\nAge       :\t%d",s[i].age);
-        printf("\nTotal Mark:\t%f",s[i].total_mark);
+        printf("\nTotal Mark:\t%.1f",s[i].total_mark);
         sum=sum+s[i].total_mark;
 
     }
-    printf( "\\nn Average   :\t %f",sum/2.0);
+    printf( "\n\n Average   :\t %f",sum/2.0);
     return 0;
 }
