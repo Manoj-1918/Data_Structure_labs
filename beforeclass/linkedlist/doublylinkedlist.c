@@ -53,6 +53,8 @@ void insertAtStart(int data){
 void inserAtend(int data){
     new_node=(struct Node*)malloc(sizeof(struct Node));
     new_node->data=data;
+    new_node->prev=NULL;
+    new_node->next=NULL;
     
     if(head==NULL){
         head=new_node;
@@ -65,13 +67,48 @@ void inserAtend(int data){
     }
         new_node->prev=temp;
         temp->next=new_node;
+        tail=new_node;
     }
     
 
 }
 
+void insertAt(int pos,int data){
+    new_node=(struct Node*)malloc(sizeof(struct Node));
+    new_node->data=data;
 
+    if(head==NULL){
+        new_node->prev=NULL;
+        new_node->next=NULL;
+        head=new_node;
+        temp=head;
+    }
+    else{
+        temp=head;
+        for(int i=0;i<pos-2;i++){
+            temp=temp->next;
+        }
+        new_node->prev=temp;
+        new_node->next=temp->next;
+        temp->next=new_node;
+        new_node->next->prev=new_node;
+        
+    }
+}
 
+int countNode(){
+    int count=0;
+    if (head==NULL) return count;
+    else
+    {
+    temp=head;
+    while(temp!=NULL){
+        count++;
+        temp=temp->next;
+    }
+    }
+    return count;
+}
 
 
 int main(){
@@ -115,31 +152,31 @@ while(c){
             break;
 
         }
-        // case 3:
-        // {
-        //     printf("Enter the data");
-        //     scanf("%d",&data);
-        //     inserAtend(data);
-        //     break;
+        case 3:
+        {
+            printf("Enter the data");
+            scanf("%d",&data);
+            inserAtend(data);
+            break;
 
 
-        // }
-        // case 4:
-        // {   int pos=-1;
-        //     printf("Enter the data");
-        //     scanf("%d",&data);
-        //     printf("enter the position you want to insert");
-        //     scanf("%d",&pos);
-        //     insertAt(pos,data);
-        //     break;
+        }
+        case 4:
+        {   int pos=-1;
+            printf("Enter the data");
+            scanf("%d",&data);
+            printf("enter the position you want to insert");
+            scanf("%d",&pos);
+            insertAt(pos,data);
+            break;
 
 
-        // }
-        // case 5:
-        // {
-        //     printf("The number of nodes in the linked list is : \t%d",countNode());
-        //     break;
-        // }
+        }
+        case 5:
+        {
+            printf("The number of nodes in the linked list is : \t%d",countNode());
+            break;
+        }
         case 6:
         {
             printf("\n\n Traversal to the linked list..\n\n");
